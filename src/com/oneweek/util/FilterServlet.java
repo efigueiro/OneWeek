@@ -41,6 +41,7 @@ public class FilterServlet implements Filter {
 		HttpServletResponse res = (HttpServletResponse) response;
 		User authenticated = (User) req.getSession().getAttribute("authenticated");
 		
+		// Set charset encoding to utf8 
 		req.setCharacterEncoding("UTF-8");
 		res.setCharacterEncoding("UTF-8");
 		

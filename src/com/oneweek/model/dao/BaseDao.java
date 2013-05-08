@@ -18,7 +18,7 @@ public class BaseDao {
 	 */
 	private static final String URL = "jdbc:postgresql://localhost:5432/OneWeek";
 	private static final String DRIVER = "org.postgresql.Driver";
-	private static final String PASSWORD = "scorpion";
+	private static final String PASSWORD = "scorpion2013";
 	private static final String USUARIO = "postgres";
 
 	/*
