@@ -1,0 +1,41 @@
+/*teste8*/
+.infoMessage {
+	font-size: 13px;
+	color: black;
+	background-repeat: no-repeat;
+	background-image: url("../images/system/accept.png");
+	text-align: left;
+	text-decoration: none;
+	padding: 3px;
+	padding-left: 22px;
+	list-style: none;
+}
+
+.errorMessage {
+	font-size: 13px;
+	color: black;
+	background-repeat: no-repeat;
+	background-image: url("../images/system/exclamation.png");
+	text-align: left;
+	text-decoration: none;
+	padding: 3px;
+	padding-left: 22px;
+	list-style: none;
+}
+
+.warnMessage {
+	font-size: 13px;
+	color: black;
+	background-repeat: no-repeat;
+	background-image: url("../images/system/error.png");
+	text-align: left;
+	text-decoration: none;
+	padding: 3px;
+	padding-left: 22px;
+	list-style: none;
+}
+
+.normalMessage {
+	font-size: 13px;
+	color: Red;
+}

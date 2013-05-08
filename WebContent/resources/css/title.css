@@ -1,0 +1,13 @@
+/*Style for all titles*/
+.shortTitle {
+	font-family: inherit;
+	font-size: 13px;
+	color: #000000;
+}
+
+.largeTitle {
+	font-family: inherit;
+	font-weight: bold;
+	font-size: 13px;
+	color: #000000;
+}

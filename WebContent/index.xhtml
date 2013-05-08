@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/resources/templates/public.xhtml">
+	<ui:define name="content">
+		<p/>
+		<h:form>
+			<h:outputText value="#{msg.login}" styleClass="shortTitle" />
+			<p/>
+			<h:messages id="messages" globalOnly="true" infoClass="infoMessage" errorClass="errorMessage" warnClass="warnMessage" />
+			<p/>
+			<h:panelGrid columns="1">
+				<h:outputText value="#{msg.email}" />
+				<h:inputText styleClass="input" value="${loginMBean.user.email}"/><br/>
+				
+				<h:outputText value="#{msg.password}"/>
+				<h:inputSecret styleClass="input" value="${loginMBean.user.password}"/><br/>
+				
+				<h:commandButton styleClass="button" value="#{msg.enter}" action="${loginMBean.validate}" />
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

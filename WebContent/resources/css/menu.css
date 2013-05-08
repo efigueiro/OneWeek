@@ -1,0 +1,21 @@
+/*Style for all tables*/
+.tableMenu {
+	width: 150px;
+}
+
+/* Style for rows*/
+.headerMenu {
+	text-align: left;
+	font: 9pt Arial, sans-serif;
+	font-weight: bold;
+}
+
+/* Style for columns */
+.firstMenu {
+	text-align: left;
+}
+
+/* Style for columns */
+.lastMenu {
+	text-align: left;
+}

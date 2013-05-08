@@ -1,0 +1,16 @@
+/*Style for all text areas*/
+.textarea {
+	font-size: 9pt;
+	padding: 2px;
+	width: 200px;
+	overflow-x: hidden;
+}
+
+.bordertextarea {
+	border: none;
+	padding: 5px;
+	font-size: 9pt;
+	color: #000000;
+	overflow-x: hidden;
+	border: 1px solid #CCCCCC;
+}

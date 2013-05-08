@@ -1,0 +1,38 @@
+/*Style for all links*/
+.link {
+	margin-left: 0px;
+	padding: 0px;
+	float: right;
+	color: #000000;
+	font-size: 9pt;
+	text-decoration: none;
+}
+
+.link:hover {
+	text-decoration: underline;
+}
+
+.linkTop {
+	font-family: inherit;
+	color: #FFFFFF;
+	font-size: 13px;
+	text-decoration: none;
+	float: right;
+	margin-right: 10px;
+}
+
+.linkTop:hover {
+	text-decoration: underline;
+}
+
+.linkLeftMenu {
+	font-family: inherit;
+	margin-left: 0px;
+	color: #000000;
+	font-size: 13px;
+	text-decoration: none;
+}
+
+.linkLeftMenu:hover {
+	text-decoration: underline;
+}

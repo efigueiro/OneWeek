@@ -1,0 +1,45 @@
+/*Style for all tables*/
+.table {
+	border: 1px solid #DDDDDD;
+	width: 680px;
+}
+
+/* Style for rows*/
+.header {
+	text-align: left;
+	font-family: inherit;
+	font: 13px;
+	color: #000000;
+	background: #DDDDDD;
+	padding: 10px;
+}
+
+/* Style for columns */
+.first {
+	text-align: left;
+	font-family: inherit;
+	font: 13px;
+	background: #FFFFFF;
+	height: 35px;
+	padding-left: 10px;
+}
+
+/* Style for columns */
+.last {
+	text-align: left;
+	font-family: inherit;
+	font: 13px;
+	background: #EEEEEE;
+	height: 35px;
+	margin-left: 10px;
+}
+
+/* Style for columns*/
+.action {
+	text-align: right;
+	font-family: inherit;
+	font: 13px;
+	color: #000000;
+	background: #DDDDDD;
+	padding: 10px;
+}

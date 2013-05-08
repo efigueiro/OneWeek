@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition>
+	<h:form>
+		<p/>
+		<p/>
+		<h:outputText styleClass="largeTitle" value="#{msg.customer}"/><br /><br/>
+		<h:commandLink styleClass="linkLeftMenu" value="#{msg.search}" action="#{navigationMBean.retrieveCustomer}"/><br/><br/>
+		<h:commandLink styleClass="linkLeftMenu" value="#{msg.add}" action="#{navigationMBean.createCustomer}"/>
+		
+		<p/>
+		
+		<h:outputText styleClass="largeTitle" value="#{msg.product}"/><br /><br/>
+		<h:commandLink styleClass="linkLeftMenu" value="#{msg.search}" action="#{navigationMBean.createCustomer}"/><br/><br/>
+		<h:commandLink styleClass="linkLeftMenu" value="#{msg.add}" action="#{navigationMBean.createCustomer}"/>
+		
+		<p/>
+		
+		<h:outputText styleClass="largeTitle" value="#{msg.provider}"/><br /><br/>
+		<h:commandLink styleClass="linkLeftMenu" value="#{msg.search}" action="#{navigationMBean.createCustomer}"/><br/><br/>
+		<h:commandLink styleClass="linkLeftMenu" value="#{msg.add}" action="#{navigationMBean.createCustomer}"/>
+		
+		<p/>
+		
+		<h:outputText styleClass="largeTitle" value="#{msg.sales}"/><br /><br/>
+		<h:commandLink styleClass="linkLeftMenu" value="#{msg.search}" action="#{navigationMBean.createCustomer}"/><br/><br/>
+		<h:commandLink styleClass="linkLeftMenu" value="#{msg.add}" action="#{navigationMBean.createCustomer}"/><br/><br/>
+		<h:commandLink styleClass="linkLeftMenu" value="#{msg.report}" action="#{navigationMBean.createCustomer}"/>
+	</h:form>
+</ui:composition>
+
+</html>

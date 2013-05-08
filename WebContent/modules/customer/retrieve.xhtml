@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/resources/templates/private.xhtml">
+	<ui:define name="content">
+		<p/>
+		<h:form>
+			<h:outputText value="#{msg.retrieveCustomer}" styleClass="shortTitle" />
+			<p/>
+			<h:messages id="messages" globalOnly="true" infoClass="infoMessage" errorClass="errorMessage" warnClass="warnMessage" />
+			<p/>
+			<h:panelGrid columns="1">
+				<h:outputText value="#{msg.keyword}" />
+				<h:inputText styleClass="input" value="${customerMBean.customer.name}"/><br/>
+			</h:panelGrid>
+			
+			<h:panelGrid columns="1">
+				<h:commandButton styleClass="button" value="#{msg.search}" action="${customerMBean.retrieve}" />
+			</h:panelGrid>
+			
+			<h:panelGrid columns="1" style="margin-top:50px;">
+				<h:dataTable binding="#{customerMBean.dataTable}" var="customer" value="#{customerMBean.customerList}" styleClass="table" headerClass="header" rowClasses="first,last">
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Nome" />
+						</f:facet>
+						<h:outputText value="#{customer.name}" />
+					</h:column>
+
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Fone" />
+						</f:facet>
+						<h:outputText value="#{customer.phone}" />
+					</h:column>
+
+					<h:column headerClass="action">
+						<f:facet name="header">
+							<h:outputText value="Actions" />
+						</f:facet>
+						<h:commandLink styleClass="link" title="Delete" action="#{customerMBean.retrieve}" onclick="erase()">
+							<h:graphicImage value="/resources/images/system/delete.png" style="margin-top:0px; margin-left:5px; border:0px;" />
+						</h:commandLink>
+
+						<h:commandLink styleClass="link" title="Edit" action="#{customerMBean.retrieve}">
+							<h:graphicImage value="/resources/images/system/edit.png" style="margin-top:0px; margin-left:5px; border:0px;" />
+						</h:commandLink>
+					</h:column>
+				</h:dataTable>
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+	
+	<ui:define name="leftcolumn">
+		<ui:include src="/resources/fragments/menu.xhtml" />
+	</ui:define>
+</ui:composition>
+</html>
