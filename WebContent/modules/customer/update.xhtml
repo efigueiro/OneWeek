@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/resources/templates/private.xhtml">
+	<ui:define name="content">
+		<p/>
+		<h:form>
+			<h:outputText value="#{msg.createCustomer}" styleClass="shortTitle" />
+			<p/>
+			<h:messages id="messages" globalOnly="true" infoClass="infoMessage" errorClass="errorMessage" warnClass="warnMessage" />
+			<p/>
+			<h:panelGrid columns="1">
+				<h:outputText value="#{msg.name}" />
+				<h:inputText styleClass="input" value="${customerMBean.customer.name}"/><br/>
+				
+				<h:outputText value="#{msg.phone}"/>
+				<h:inputText styleClass="input" value="${customerMBean.customer.phone}"/><br/>
+				
+				<h:outputText value="#{msg.address}"/>
+				<h:inputText styleClass="input" value="${customerMBean.customer.address}"/><br/>
+				
+				<h:outputText value="#{msg.email}"/>
+				<h:inputText styleClass="input" value="${customerMBean.customer.email}"/><br/>
+				
+				<h:outputText value="#{msg.observation}"/>
+				<h:inputText styleClass="input" value="${customerMBean.customer.observation}"/><br/>
+				<h:inputHidden value="#{customerMBean.customer.customerId}" /> 
+			</h:panelGrid>
+			
+			<h:panelGrid columns="2">
+				<h:commandButton styleClass="button" value="#{msg.add}" action="${customerMBean.create}" />
+				<h:commandButton styleClass="button" style="margin-left:15px;" value="#{msg.clear}" action="${customerMBean.clean}" />
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+	
+	<ui:define name="leftcolumn">
+		<ui:include src="/resources/fragments/menu.xhtml" />
+	</ui:define>
+</ui:composition>
+</html>
