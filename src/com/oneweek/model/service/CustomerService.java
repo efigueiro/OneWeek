@@ -6,7 +6,6 @@ import org.apache.commons.lang3.StringUtils;
 
 import com.oneweek.model.dao.CustomerDao;
 import com.oneweek.model.entity.Customer;
-import com.oneweek.util.Encoding;
 import com.oneweek.util.JSFUtils;
 import com.oneweek.util.MessageProvider;
 
