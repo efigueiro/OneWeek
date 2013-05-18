@@ -7,13 +7,15 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.bean.ViewScoped;
 import javax.faces.component.html.HtmlDataTable;
 
 import com.oneweek.model.entity.Customer;
 import com.oneweek.model.service.CustomerService;
+import com.oneweek.util.JSFUtils;
 
 @ManagedBean(name = "customerMBean")
-@RequestScoped
+@ViewScoped
 public class CustomerMBean implements Serializable {
 
 	/**
@@ -22,7 +24,7 @@ public class CustomerMBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private Customer customer;
 	private List<Customer> customerList;
-	private HtmlDataTable dataTable;
+	private String selectedCustomer;
 
 	@PostConstruct
 	public void init() {
@@ -37,8 +39,13 @@ public class CustomerMBean implements Serializable {
 
 	public String retrieve() throws Exception {
 		this.setCustomerList(CustomerService.getInstance().retrieve(customer));
-		this.dataTable.setValue(customerList);
 		return "";
+	}
+	
+	public String test(){
+		System.out.println("teste");
+		JSFUtils.addMessageInfo(selectedCustomer);
+		return null;
 	}
 	
 	public String delete() {
@@ -66,12 +73,14 @@ public class CustomerMBean implements Serializable {
 		this.customerList = customerList;
 	}
 
-	public HtmlDataTable getDataTable() {
-		return dataTable;
+	public String getSelectedCustomer() {
+		return selectedCustomer;
 	}
 
-	public void setDataTable(HtmlDataTable dataTable) {
-		this.dataTable = dataTable;
+	public void setSelectedCustomer(String selectedCustomer) {
+		this.selectedCustomer = selectedCustomer;
 	}
+
+
 
 }

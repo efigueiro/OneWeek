@@ -24,7 +24,7 @@
 			</h:panelGrid>
 			
 			<h:panelGrid columns="1" style="margin-top:50px;">
-				<h:dataTable binding="#{customerMBean.dataTable}" var="customer" value="#{customerMBean.customerList}" styleClass="table" headerClass="header" rowClasses="first,last">
+				<h:dataTable  var="customer" value="#{customerMBean.customerList}" styleClass="table" headerClass="header" rowClasses="first,last">
 					<h:column>
 						<f:facet name="header">
 							<h:outputText value="Nome" />
@@ -47,8 +47,9 @@
 							<h:graphicImage value="/resources/images/system/delete.png" style="margin-top:0px; margin-left:5px; border:0px;" />
 						</h:commandLink>
 
-						<h:commandLink styleClass="link" title="Edit" action="#{customerMBean.retrieve}">
+						<h:commandLink styleClass="link" title="Edit" action="#{customerMBean.test}">
 							<h:graphicImage value="/resources/images/system/edit.png" style="margin-top:0px; margin-left:5px; border:0px;" />
+							<f:setPropertyActionListener target="#{customerMBean.selectedCustomer}" value="#{customer.email}" />
 						</h:commandLink>
 					</h:column>
 				</h:dataTable>
