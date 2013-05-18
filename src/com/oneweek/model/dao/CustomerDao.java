@@ -41,8 +41,7 @@ public class CustomerDao extends BaseDao {
 			conn.close();
 			JSFUtils.addMessageInfo(MessageProvider.getInstance().getValue("addRecord"));
 		} catch (Exception e) {
-			JSFUtils.addMessageError(MessageProvider.getInstance().getValue("recordFail" + " ")
-					+ "( " + e.getMessage() + " )");
+			JSFUtils.addMessageError(MessageProvider.getInstance().getValue("recordFail") + " ( " + e.getMessage() + " )");
 			conn.close();
 		}
 		return null;

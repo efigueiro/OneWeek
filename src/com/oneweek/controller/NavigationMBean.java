@@ -15,8 +15,6 @@ public class NavigationMBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	public String createCustomer() {
-		String teste;
-		teste ="";
 		return "/modules/customer/create.xhtml";
 	}
 	

@@ -6,9 +6,7 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
 import javax.faces.bean.ViewScoped;
-import javax.faces.component.html.HtmlDataTable;
 
 import com.oneweek.model.entity.Customer;
 import com.oneweek.model.service.CustomerService;
@@ -24,7 +22,7 @@ public class CustomerMBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private Customer customer;
 	private List<Customer> customerList;
-	private String selectedCustomer;
+	private String selectedCustomerId;
 
 	@PostConstruct
 	public void init() {
@@ -44,7 +42,7 @@ public class CustomerMBean implements Serializable {
 	
 	public String test(){
 		System.out.println("teste");
-		JSFUtils.addMessageInfo(selectedCustomer);
+		JSFUtils.addMessageInfo(selectedCustomerId);
 		return null;
 	}
 	
@@ -73,14 +71,12 @@ public class CustomerMBean implements Serializable {
 		this.customerList = customerList;
 	}
 
-	public String getSelectedCustomer() {
-		return selectedCustomer;
+	public String getSelectedCustomerId() {
+		return selectedCustomerId;
 	}
 
-	public void setSelectedCustomer(String selectedCustomer) {
-		this.selectedCustomer = selectedCustomer;
+	public void setSelectedCustomerId(String selectedCustomerId) {
+		this.selectedCustomerId = selectedCustomerId;
 	}
-
-
-
+	
 }
